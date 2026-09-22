@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#23272F">
+<title>Tina's Friends — English Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="header-title">Tina's Friends 📖</div>
+    <div class="header-right">
+      <div class="score">⭐ <span id="stars">0</span></div>
+    </div>
+  </header>
+
+  <!-- Start screen -->
+  <div id="start-screen" class="screen active">
+    <div class="start-emoji">🐦🐕🐈</div>
+    <h1>Tina's Friends</h1>
+    <p class="start-sub">Formative Assessment II — English practice</p>
+    <button class="start-btn" onclick="startQuiz()">Let's Play! ▶</button>
+  </div>
+
+  <!-- Quiz screen -->
+  <div id="quiz-screen" class="screen">
+    <div id="progress">
+      <span id="round-info">1 / 18</span>
+      <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+    </div>
+    <div id="section-label"></div>
+    <div id="question-card">
+      <div id="media-box" class="media-box hidden">
+        <img id="media-img" alt="">
+        <div id="media-emoji" class="media-emoji"></div>
+      </div>
+      <div id="prompt" class="prompt"></div>
+      <div id="options"></div>
+      <div id="type-answer" class="type-answer hidden">
+        <input id="type-input" type="text" autocomplete="off" autocapitalize="off" placeholder="Type your answer">
+        <button id="type-submit" class="submit-btn" onclick="submitTyped()">Check ✔</button>
+      </div>
+      <div id="hint" class="hint hidden"></div>
+    </div>
+    <div id="feedback" class="feedback hidden">
+      <div id="feedback-emoji"></div>
+      <div id="feedback-text"></div>
+    </div>
+  </div>
+
+  <!-- Done screen -->
+  <div id="done-screen" class="screen">
+    <div class="big-emoji">🎉</div>
+    <h2>Amazing Job!</h2>
+    <p>You got <span id="final-score">0</span> out of <span id="final-total">18</span> stars!</p>
+    <button class="start-btn" onclick="location.reload()">Play Again! 🔄</button>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
