@@ -17,13 +17,6 @@ const QUIZ = [
     ],
   },
   {
-    section: "Rhyme Time",
-    questions: [
-      { type: 'type', prompt: "What rhymes with SAIL?", answer: ['nail'], hint: 'It starts with "n"' },
-      { type: 'type', prompt: "What rhymes with FAR?", answer: ['car'], hint: 'It starts with "c"' },
-    ],
-  },
-  {
     section: "True or False",
     questions: [
       { type: 'truefalse', prompt: "The parakeet is grey in colour.", answer: false },
